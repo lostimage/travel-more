@@ -1,0 +1,428 @@
+@import "normalize.scss";
+@import "_layout.scss";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700');
+@font-face {
+font-family: 'FontAwesome';
+    src: local('Awesome'), url('../fonts/fontawesome.woff2') format('woff2'), url('../fonts/fontawesome.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aleo';
+    src: local('Aleo'), url('../fonts/aleo-regular-webfont.woff2') format('woff2'), url('../fonts/aleo-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+$primary-color:#e8e8e8;
+$primary-font:'Josefin Sans', sans-serif;
+$button-font:'Aleo', sans-serif;
+$Awesome-font:'FontAwesome' ,sans-serif;
+body{font:400 16px/26px $primary-font;
+	color: $primary-color;
+	border: 15px solid #fff;
+}
+/*.ba-border {
+	padding:15px ;
+}*/
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1150px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	font-family:$button-font;
+	text-transform: uppercase;
+	background: #5474FD;
+	color: #FFF;
+	padding: 0 37px;
+	line-height: 60px;
+	text-decoration: none;
+}
+.ba-button--search {
+	border:0;
+	line-height: 56px;
+	padding:0 10px 0 32px;
+	& span{
+	margin-right: 15px;
+	font-family:$button-font;
+	color: #FFF;
+	}
+}
+.ba-button--explore {
+	letter-spacing: 0.075em;
+	padding: 0 36px 0 39px;
+}
+.ba-button--book {
+	padding:0 66px;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+
+	border:0;
+	}
+	input[type="text"]::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #999;
+		letter-spacing: 0.2em;
+
+	}
+	input[type="text"]::-moz-placeholder{
+		font-size: 14px;
+		color: #999;
+		letter-spacing: 0.2em;
+
+	}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+	outline:0;
+}
+textarea {
+
+}
+
+
+/*intro*/
+
+
+
+
+.ba-intro {
+	position: relative;
+	padding: 267px 0 289px;
+	background:#5474FD url(../img/bgheader.jpg) no-repeat 50% / cover;
+	text-align: center;
+	color:  #ffffff;
+	line-height: 1;
+	&__title {
+		font: 600 48px/1 "Josefin Sans", sans-serif;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+
+	}
+	&__subtitle {
+		font-size: 22px;
+		font-weight: 400;
+		letter-spacing: 0.24em;
+		    line-height: 33px;
+		    margin-bottom: 44px;
+	}
+}
+.ba-search-form {
+	border:2px solid #fff;
+	max-width: 645px;
+	display:flex;
+	margin: 0 auto;
+	&__input{
+		flex-grow: 1;
+		text-align: center;
+	}
+}
+.ba-scroll {
+	position: absolute;
+	max-width: 105px;
+	left:50%;
+	bottom: 130px;
+	transform:translateX(-50%);
+	text-decoration: none;
+	font:400 14px/1.5 $primary-font;
+	color:#fff;
+	letter-spacing: 0.15em;
+}
+
+
+
+/*header panel*/
+
+
+
+.ba-header__panel {
+	background: #5474FD;
+
+}
+.ba-bar {
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.ba-nav{
+	display: flex;
+	list-style-type: none;
+	padding-left:0;
+	margin-right: 7px;
+	&__item {
+		padding-left: 40px;
+		& a{
+			text-decoration: none;
+			font-family:$button-font;
+			color:  #ffffff;
+			font-size: 14px;
+			text-transform: uppercase;
+			&:hover {
+				color:$primary-color;
+			}
+		}
+	}
+
+}
+
+
+
+/*why us*/
+
+
+
+.ba-why-us {
+	padding: 120px 0 124px;
+	color: #FFF;
+	background:#3E3B3A url(../img/bgwhyus.jpg) no-repeat 50% / cover;
+	&__title {
+		font-size: 36px;
+		font-family: $button-font;
+	}
+	&__description {
+		padding: 63px 0 43px;
+
+		& p {
+			margin: 0;
+			letter-spacing: 0.034em;
+		}
+		& p+p {
+			padding-top: 27px;
+		}
+	}
+}
+.ba-why-us--left {
+	padding:84px 3px 0 0 ;
+}
+.ba-row{
+	margin-left:0;
+}
+.ba-row > [class*="ba-col-"]{
+	float: left;
+	padding-left: 0;
+}
+.ba-images {
+	padding-left: 78px;
+	margin: 0;
+	&__item {
+		list-style-type: none;
+		& img{
+			display: block;
+			width: 100%;
+		}
+	}
+	&__item--left {
+		padding-right: 126px;
+	}
+	&__item--right {
+		padding-left: 126px;
+	}
+}
+
+
+
+ /*booking*/
+
+
+.ba-booking {
+	background:#333333;
+	padding: 81px 0 121px;
+	color: #FFF;
+	position: relative;
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: $button-font;
+		color: #e8e8e8;
+		font-size: 36px;
+		& p {
+
+			margin: 0;
+			margin-top: 12px;
+		}
+
+	}
+	&__item--left {
+		padding-right: 16px;
+	}
+	&__item--right {
+		padding-left: 16px;
+	}
+
+	&__image {
+		width: 96px;
+		height: 96px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+
+	}
+	&__line	{
+		position: absolute;
+		left: 29%;
+		top: 13%;
+	}
+}
+
+
+/* SPAIN */
+
+.ba-spain {
+	padding: 230px 0 100px;
+
+	&__title {
+		font-size: 20px;
+		line-height: 26px;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: -0.03em;
+	}
+	&__suptitle {
+		font-size: 20px;
+		margin-bottom: 25px;
+	}
+	&__description {
+		background-color: rgba(35, 35, 35, 0.9);
+		padding: 45px 15px 50px 28px;
+		& p {
+			letter-spacing: -0.04em;
+			font-weight: 300;
+			margin-bottom: 44px;
+		}
+	}
+}
+.ba-spain--first {
+	background: #333 url(../img/bgspain1.jpg) no-repeat 50% / cover;
+}
+.ba-spain--second {
+	background: #333 url(../img/bgspain2.jpg) no-repeat 50% / cover;
+}
+.ba-row > [class*="ba-col-6--right"] {
+	float:right;
+	margin-left: 16px;
+}
+.ba-row > [class*="ba-col-6--left"] {
+	margin-right: 16px;
+}
+
+
+
+/*TOURIST*/
+
+
+
+
+.ba-tourist {
+	padding: 120px 0 200px;
+	background:#282A2B url("../img/bgtourist.jpg") no-repeat 50% / cover;
+	text-align: center;
+	&__title{
+		font-family: $button-font;
+		color:  #ffffff;
+		font-size: 36px;
+		margin-bottom: 101px;
+	}
+}
+.ba-row--flex {
+	display: flex;
+}
+.ba-review {
+	display: flex;
+	&__photo {
+		flex-shrink: 0;
+		& img {
+			display: block;
+			width: 100%;
+		}
+	}
+	&__title {
+		color:  #fefefe;
+		font-size: 20px;
+		margin-bottom: 26px;
+	}
+	&__article {
+	padding: 50px 50px 0 57px;
+	background: #333;
+	text-align: left;
+	& blockquote {
+		margin: 0;
+		&:before {
+			content:'“';
+			font-family: $Awesome-font;
+			color:  #5474fd;
+			font-size: 36px;
+		}
+	}
+	}
+}
+
+
+
+/* FOOTER */
+
+
+
+.ba-footer {
+	background: #232323;
+	padding: 119px 0 50px;
+	text-align: center;
+	&__title {
+		color:  #ffffff;
+		font-size: 24px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.14em;
+		margin-bottom: 6px;
+	}
+}
+.ba-social {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin-top: 22px;
+	&__item {
+		list-style-type: none;
+		padding-left: 25px;
+	}
+	&__item:first-child {
+		padding-left: 0;
+	}
+}
